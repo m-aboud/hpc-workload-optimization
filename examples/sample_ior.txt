@@ -1,0 +1,9 @@
+IOR-4.1.0: MPI Coordinated Test of Parallel I/O
+Command line used: ior -a MPIIO -t 16m -b 4g -o /scratch/test.dat -C -e -k
+api                : MPIIO
+blockSize          = 4g
+transferSize       = 16m
+Summary of all tests:
+Operation   Max MiB/s   Min MiB/s   Mean MiB/s  Std Dev
+write       12450.23    11990.10    12180.55    188.10
+read        14120.44    13780.12    13990.87    140.33

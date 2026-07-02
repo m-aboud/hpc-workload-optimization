@@ -1,0 +1,13 @@
+source,message_size_bytes,bandwidth_mb_s
+sample_osu_bw.txt,1,5.1
+sample_osu_bw.txt,2,9.8
+sample_osu_bw.txt,4,18.5
+sample_osu_bw.txt,8,35.0
+sample_osu_bw.txt,16,68.2
+sample_osu_bw.txt,32,130.4
+sample_osu_bw.txt,64,250.1
+sample_osu_bw.txt,128,480.5
+sample_osu_bw.txt,256,890.3
+sample_osu_bw.txt,512,1500.4
+sample_osu_bw.txt,1024,2500.7
+sample_osu_bw.txt,1048576,11800.5

@@ -1,0 +1,43 @@
+cluster:
+  name: example-hpc
+  scheduler: slurm
+  accounting_days_default: 14
+
+partitions:
+  - name: compute
+    nodes: 64
+    cores_per_node: 64
+    memory_per_node_gb: 512
+    default_time: "02:00:00"
+    max_time: "48:00:00"
+  - name: gpu
+    nodes: 8
+    gpus_per_node: 8
+    cores_per_node: 96
+    memory_per_node_gb: 1024
+    default_time: "01:00:00"
+    max_time: "24:00:00"
+
+storage_tiers:
+  - name: scratch
+    path: /lustre/scratch/$USER
+    filesystem: lustre
+    intended_use: temporary high-throughput I/O
+  - name: project
+    path: /lustre/project/$USER
+    filesystem: lustre
+    intended_use: shared project data
+
+mpi:
+  launcher: srun
+  modules:
+    - openmpi
+    - ior
+    - osu-micro-benchmarks
+
+thresholds:
+  cpu_efficiency_warn: 0.60
+  cpu_efficiency_critical: 0.40
+  memory_efficiency_low: 0.25
+  walltime_efficiency_low: 0.35
+  queue_wait_minutes_high: 60

@@ -1,0 +1,19 @@
+ior:
+  transfer_sizes: ["1m", "4m", "16m", "64m"]
+  block_sizes: ["1g", "4g"]
+  api_modes: ["POSIX", "MPIIO"]
+  repetitions: 3
+  flags:
+    - "-C"   # reorder tasks to reduce client-side caching effects
+    - "-e"   # fsync before timing ends
+    - "-k"   # keep file for read phase
+
+lustre_striping:
+  stripe_counts: [1, 2, 4, 8, 16]
+  stripe_sizes: ["1m", "4m", "16m"]
+
+osu:
+  tests:
+    - osu_latency
+    - osu_bw
+  message_sizes: "default"

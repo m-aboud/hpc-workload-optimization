@@ -1,0 +1,13 @@
+source,message_size_bytes,latency_us
+sample_osu_latency.txt,0,1.22
+sample_osu_latency.txt,1,1.24
+sample_osu_latency.txt,2,1.25
+sample_osu_latency.txt,4,1.27
+sample_osu_latency.txt,8,1.31
+sample_osu_latency.txt,16,1.39
+sample_osu_latency.txt,32,1.52
+sample_osu_latency.txt,64,1.8
+sample_osu_latency.txt,128,2.2
+sample_osu_latency.txt,256,2.85
+sample_osu_latency.txt,512,3.7
+sample_osu_latency.txt,1024,5.1
