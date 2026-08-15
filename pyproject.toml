@@ -4,31 +4,22 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hpc-workload-optimization"
-version = "1.0.0"
-description = "HPC workload benchmarking and optimization toolkit for Slurm, Lustre, MPI, IOR, and OSU Micro-Benchmarks."
-readme = "README.md"
+version = "2.0.0"
+description = "HPC workload optimization and research computing operations toolkit"
 requires-python = ">=3.10"
-authors = [{ name = "Mohammad Abood" }]
-license = { text = "MIT" }
-dependencies = [
-  "pandas>=2.0",
-  "PyYAML>=6.0",
-  "rich>=13.0",
-  "tabulate>=0.9"
-]
+dependencies = []
 
 [project.optional-dependencies]
-dev = [
-  "pytest>=8.0",
-  "ruff>=0.5.0"
-]
+dev = ["pytest>=8", "ruff>=0.5"]
 
 [project.scripts]
 hpcopt = "hpcopt.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.ruff]
-line-length = 100
-target-version = "py310"
+line-length = 120

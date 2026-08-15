@@ -1,10 +1,8 @@
 # Changelog
 
-## 1.0.0 - 2026-07-02
-
-- Initial portfolio-ready release.
-- Added Slurm efficiency analytics.
-- Added IOR and OSU benchmark parsers.
-- Added Lustre stripe sweep automation.
-- Added MPI profiling templates.
-- Added sample reports and test fixtures.
+## 2.0.0 — Elite HPC / Research Computing Edition
+- Added Apptainer scientific-container workflow.
+- Added Slurm QOS/accounting audit.
+- Added OpenMP, Fortran+OpenMP, OpenACC and MPI examples.
+- Added read-only Linux node hardening/kernel patch-state audit.
+- Added researcher support, storage-platform and business-benefit documentation.

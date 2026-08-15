@@ -1,0 +1,19 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%labels
+    Author Mohammed Aboud
+    Purpose HPC research-computing portfolio lab
+
+%post
+    apt-get update
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+      build-essential gfortran openmpi-bin libopenmpi-dev ca-certificates python3
+    rm -rf /var/lib/apt/lists/*
+
+%environment
+    export OMPI_MCA_btl_vader_single_copy_mechanism=none
+
+%runscript
+    echo "HPC research container ready"
+    exec "$@"

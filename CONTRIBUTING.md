@@ -1,17 +1,6 @@
 # Contributing
 
-Contributions should preserve the operational focus of this project: repeatable HPC benchmarking, safe cluster execution, clear reporting, and sanitized data.
-
-## Development workflow
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .[dev]
-make test
-make demo
-```
-
-## Data policy
-
-Do not commit production cluster hostnames, usernames, account IDs, project IDs, raw accounting records, or benchmark results that reveal sensitive infrastructure capacity unless explicitly approved.
+- Keep examples sanitized and vendor-neutral where possible.
+- Do not commit real usernames, project/account IDs, cluster names or research data.
+- Prefer read-only audit scripts unless a change is clearly documented and gated.
+- Add tests for Python logic and run `make lint test` before publishing.

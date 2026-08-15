@@ -1,0 +1,19 @@
+qos:
+  normal:
+    max_wall: "24:00:00"
+    max_jobs_per_user: 100
+    priority: 100
+  short:
+    max_wall: "02:00:00"
+    max_jobs_per_user: 200
+    priority: 150
+  gpu:
+    max_wall: "12:00:00"
+    max_gpus_per_user: 8
+    priority: 120
+review_objectives:
+  - avoid excessive walltime padding
+  - keep account associations current
+  - ensure fair-share visibility
+  - document preemption policy
+  - align limits with research workload classes

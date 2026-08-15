@@ -2,17 +2,17 @@
 
 demo:
 	mkdir -p reports
-	hpcopt slurm-report --input examples/sample_sacct.csv --output reports/slurm_efficiency_report.md
-	hpcopt parse-ior --input examples/sample_ior.txt --output reports/ior_summary.csv
-	hpcopt parse-osu --input examples/sample_osu_latency.txt --kind latency --output reports/osu_latency.csv
-	hpcopt parse-osu --input examples/sample_osu_bw.txt --kind bandwidth --output reports/osu_bandwidth.csv
-	hpcopt bottlenecks --sacct examples/sample_sacct.csv --ior examples/sample_ior.txt --output reports/bottleneck_assessment.md
+	python -m hpcopt.cli slurm-report --input examples/sample_sacct.csv --output reports/slurm_efficiency_report.md
+	cp reports/slurm_efficiency_report.md examples/sample-reports/slurm_efficiency_report.md
+	@echo "Demo report: reports/slurm_efficiency_report.md"
 
 test:
 	pytest -q
 
 lint:
 	ruff check src tests
+	bash -n scripts/*.sh slurm/templates/*.sbatch
 
 clean:
-	rm -rf reports/*.csv reports/*.md reports/ior_raw reports/osu_raw .pytest_cache .ruff_cache
+	rm -rf reports/* .pytest_cache .ruff_cache src/*.egg-info src/hpc_workload_optimization.egg-info
+	touch reports/.gitkeep

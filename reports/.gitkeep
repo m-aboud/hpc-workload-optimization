@@ -1,2 +1,0 @@
-# Keeps the reports/ output directory present in a fresh clone.
-# Generated reports (*.md, *.csv) are gitignored; see examples/sample-reports/ for committed samples.

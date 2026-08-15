@@ -2,21 +2,11 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.DS_Store
-reports/*.tmp
-reports/ior_raw/
-reports/osu_raw/
+reports/*
+!reports/.gitkeep
+*.sif
 *.out
 *.err
-*.log
-*.dat
-*.h5
+build/
+dist/
 *.egg-info/
-.coverage
-htmlcov/
-
-# Generated demo/report outputs (committed samples live in examples/sample-reports/)
-reports/*.md
-reports/*.csv
